@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f2b87977-0bbb-4045-9368-b270930cbf97">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<queryString language="SQL">
 		<![CDATA[select * from supplier]]>
 	</queryString>
@@ -22,16 +25,66 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="206" y="34" width="179" height="45" uuid="37a29722-31f9-4f8f-8db9-039d3a0274e9"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Supplier]]></text>
+			</staticText>
+		</band>
 	</title>
 	<pageHeader>
 		<band height="35" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch"/>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="f5734f9d-d7b8-4a63-a78e-6fb0408dbbbc"/>
+				<text><![CDATA[KodeSupplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="20" uuid="eb95c47d-68ec-4ea1-b80a-5e679eaccc51"/>
+				<text><![CDATA[NamaSupplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="20" uuid="0470d9fc-c1f3-4c00-84e7-ded3fb8851b6"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="20" uuid="d11f3a49-c78d-4d87-8181-fd23e8750dcd"/>
+				<text><![CDATA[Telp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="20" uuid="a9222413-f3ec-4029-a29f-8e8da657f76b"/>
+				<text><![CDATA[KodePos]]></text>
+			</staticText>
+		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="ea839369-7940-458d-9928-15645fb9cc45"/>
+				<textFieldExpression><![CDATA[$F{KodeSupplier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="aa2abf81-3144-43f2-9b70-f8cc0677243f"/>
+				<textFieldExpression><![CDATA[$F{NamaSupplier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="4ece988d-8897-4e68-89c7-14d4ff1ec081"/>
+				<textFieldExpression><![CDATA[$F{Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="cfc9a848-41b8-4fe5-96ef-72be290fdbd9"/>
+				<textFieldExpression><![CDATA[$F{Telp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="8034a234-bc26-486b-9395-11b1c547c70e"/>
+				<textFieldExpression><![CDATA[$F{KodePos}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 	<columnFooter>
 		<band height="45" splitType="Stretch"/>

@@ -188,7 +188,7 @@ public class crudTable {
    
    public ResultSet getData(String query) {
     try {
-        Connection conn = getKoneksiDB(); // Inisialisasi koneksi sebelum digunakan
+        Connection conn = getKoneksiDB();
         Statement stmt = conn.createStatement();
         return stmt.executeQuery(query);
     } catch (SQLException e) {
@@ -199,13 +199,13 @@ public class crudTable {
    
    public void loadDataToTable(javax.swing.JTable table, String query) {
     DefaultTableModel model = (DefaultTableModel) table.getModel();
-    model.setRowCount(0); // Reset data pada tabel
+    model.setRowCount(0); 
     try {
         ResultSet rs = getData(query);
         while (rs.next()) {
             Object[] row = new Object[rs.getMetaData().getColumnCount()];
             for (int i = 0; i < row.length; i++) {
-                row[i] = rs.getObject(i + 1); // Ambil data berdasarkan kolom
+                row[i] = rs.getObject(i + 1); 
             }
             model.addRow(row);
         }

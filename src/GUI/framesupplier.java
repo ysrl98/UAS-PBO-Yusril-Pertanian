@@ -31,7 +31,7 @@ private crudTable con;
         loadTableData();
     }
     private void loadTableData() {
-        String query = "SELECT * FROM supplier"; // Ganti "barang" dengan tabel Anda
+        String query = "SELECT * FROM supplier"; 
         con.loadDataToTable(jTable1, query);
     }
     
@@ -55,7 +55,7 @@ private crudTable con;
                 rs.getString("KodePos")
             });
         }
-        jTable1.setModel(model); // Set model tabel dengan data baru
+        jTable1.setModel(model); 
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(null, "Gagal memuat data: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }

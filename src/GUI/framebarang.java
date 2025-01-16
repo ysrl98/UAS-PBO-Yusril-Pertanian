@@ -28,8 +28,9 @@ public class framebarang extends javax.swing.JFrame {
         con = new crudTable();
         tampilkanData();
     }
+    
     private void loadTableData() {
-        String query = "SELECT * FROM barang"; // Ganti "barang" dengan tabel Anda
+        String query = "SELECT * FROM barang"; 
         con.loadDataToTable(jTable1, query);
     }
     
@@ -55,7 +56,7 @@ public class framebarang extends javax.swing.JFrame {
                 rs.getString("KodeJenis")
             });
         }
-        jTable1.setModel(model); // Set model tabel dengan data baru
+        jTable1.setModel(model); 
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(null, "Gagal memuat data: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
